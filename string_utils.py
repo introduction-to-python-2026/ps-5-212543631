@@ -19,9 +19,9 @@ def split_at_digit(formula):
 
 def count_atoms_in_molecule(molecular_formula):
     dict_of_atoms = {}
-    split_formula = split_by_capitals(molecular_formula)
-    for atom in split_by_capitals(molecular_formula):
-        atom_name, atom_count = split_at_number(atom)
+    split_formula = split_before_uppercases(molecular_formula)
+    for atom in split_before_uppercases(molecular_formula):
+        atom_name, atom_count = split_at_digit(atom)
         dict_of_atoms[atom_name] = atom_count
     return dict_of_atoms
 
